@@ -10,4 +10,10 @@ class LineTest {
         Line l1 = new Line(0, 0, 1, 1);
         assertTrue(l1.areTwoLinesAreEqual(0, 0, 1, 1));
     }
+
+    @Test
+    void twoLinesHaveDiffEndPointAtSameDirectionAreEqual() {
+        Line l1 = new Line(0, 0, 1, 1);
+        assertFalse(l1.areTwoLinesAreEqual(0, 0, 1, 2));
+    }
 }
